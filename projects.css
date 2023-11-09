@@ -1,0 +1,213 @@
+body{
+    background: #f6f6f9;
+    font-family: poppins;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --------BACKGROUND------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .glowing {
+    position: absolute;
+    min-width: 700px;
+    height: 550px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+  }
+  
+  .glowing:nth-child(even) {
+    transform-origin: left;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+  }
+  
+  .glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+  }
+  
+  .glowing span:nth-child(3n + 1)::before {
+    background: rgb(7, 7, 7);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+      0 0 40px rgba(134,255,0,1),
+      0 0 60px rgba(134,255,0,1),
+      0 0 80px rgba(134,255,0,1),
+      0 0 0 8px rgba(134,255,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 2)::before {
+    background: rgb(10, 10, 10);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+      0 0 40px rgba(255,214,0,1),
+      0 0 60px rgba(255,214,0,1),
+      0 0 80px rgba(255,214,0,1),
+      0 0 0 8px rgba(255,214,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 3)::before {
+    background: rgb(18, 19, 19);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+      0 0 40px rgba(0,226,255,1),
+      0 0 60px rgba(0,226,255,1),
+      0 0 80px rgba(0,226,255,1),
+      0 0 0 8px rgba(0,226,255,.1);
+  }
+  
+  .glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+
+/* ------------- NAVBAR-------------  */
+#nav{
+    width: 90%;
+    top: 7px;
+    left: 2px;
+    position: absolute;
+    text-align: right;
+    z-index: 1; 
+    margin-top: 25px;
+}
+
+
+#nav li{
+    display:inline-flex;
+    width: 70px;
+    padding: 1px;
+    justify-content: space-evenly;
+
+}
+
+
+#nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav a:hover{
+    color:rgb(57, 133, 133)
+}
+
+
+/* paragraph about myself */
+
+h2{
+    padding-top: 100px;
+    font-family: Rubik Glitch;
+    font-size: 50px;
+    text-align: left;
+
+}
+
+h4{
+    font-size: 12px;
+}
+
+
+
+/* Projects */
+
+#projects{
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+#projects li{
+    list-style-type: square;
+    
+}
+
+#P1 {
+    font-size: 40px;
+    font-family: poppins;
+    list-style: none;
+    margin-top: 40px;
+    
+}
+
+#P1 a{
+    color: black;
+    text-decoration: none;
+    font-family: poppins;
+}
+
+#P1 a:hover {
+    color: rgb(64, 67, 69);
+    
+
+}
+
+#P1_subtitle{
+    list-style: none;
+    font-size: 14px;
+    font-family: poppins;
+
+}
